@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
       return await fn() ?? defaultValue;
     } on PlatformException {
       return 'Failed to get platform version.';
-    } 
+    }
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
@@ -44,8 +44,9 @@ class _MyAppState extends State<MyApp> {
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
-    
-    platformVersion = await tryCatch(_sstpPlugin.getPlatformVersion, 'Unknown platform version');
+
+    platformVersion = await tryCatch(
+        _sstpPlugin.getPlatformVersion, 'Unknown platform version');
 
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling
@@ -69,8 +70,11 @@ class _MyAppState extends State<MyApp> {
             children: [
               Text('Running on: $_platformVersion\n'),
               ElevatedButton(
-                  onPressed: () => tryCatch(_sstpPlugin.connect),
-                  child: const Text("Connect"),
+                onPressed: () => tryCatch(() => _sstpPlugin.connect(
+                      hostname: '79.164.218.31',
+                      port: 995,
+                    )),
+                child: const Text("Connect"),
               ),
             ],
           ),
