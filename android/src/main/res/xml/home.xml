@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vpn.sstp.preference.custom.HomeHostnamePreference android:key="HOME_HOSTNAME"/>
+    <com.vpn.sstp.preference.custom.HomeUsernamePreference android:key="HOME_USERNAME"/>
+    <com.vpn.sstp.preference.custom.HomePasswordPreference android:key="HOME_PASSWORD"/>
+    <com.vpn.sstp.preference.custom.HomeConnectorPreference android:key="HOME_CONNECTOR" />
+
+    <PreferenceCategory>
+        <com.vpn.sstp.preference.custom.HomeStatusPreference android:key="HOME_STATUS"/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="SSL Layer">
+        <com.vpn.sstp.preference.custom.SSLPortPreference android:key="SSL_PORT"/>
+        <com.vpn.sstp.preference.custom.SSLVersionPreference android:key="SSL_VERSION"/>
+        <com.vpn.sstp.preference.custom.SSLDoVerifyPreference android:key="SSL_DO_VERIFY"/>
+        <com.vpn.sstp.preference.custom.SSLDoAddCertPreference android:key="SSL_DO_ADD_CERT"/>
+        <com.vpn.sstp.preference.custom.SSLCertDirPreference android:key="SSL_CERT_DIR"/>
+        <com.vpn.sstp.preference.custom.SSLDoSelectSuitesPreference android:key="SSL_DO_SELECT_SUITES"/>
+        <com.vpn.sstp.preference.custom.SSLSuitesPreference android:key="SSL_SUITES"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="PPP Layer">
+        <com.vpn.sstp.preference.custom.PPPMruPreference android:key="PPP_MRU"/>
+        <com.vpn.sstp.preference.custom.PPPMtuPreference android:key="PPP_MTU"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="PPP Authentication Protocol">
+        <com.vpn.sstp.preference.custom.PPPPapEnabledPreference android:key="PPP_PAP_ENABLED"/>
+        <com.vpn.sstp.preference.custom.PPPMsChapv2EnabledPreference android:key="PPP_MSCHAPv2_ENABLED"/>
+        <com.vpn.sstp.preference.custom.PPPAuthTimeoutPreference android:key="PPP_AUTH_TIMEOUT"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="PPP Network Protocol">
+        <com.vpn.sstp.preference.custom.PPPIPv4EnabledPreference android:key="PPP_IPv4_ENABLED"/>
+        <com.vpn.sstp.preference.custom.PPPIPv6EnabledPreference android:key="PPP_IPv6_ENABLED"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="IP Layer">
+        <com.vpn.sstp.preference.custom.IPPrefixPreference android:key="IP_PREFIX"/>
+        <com.vpn.sstp.preference.custom.IPOnlyLanPreference android:key="IP_ONLY_LAN"/>
+        <com.vpn.sstp.preference.custom.IPOnlyUlaPreference android:key="IP_ONLY_ULA"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Reconnection">
+        <com.vpn.sstp.preference.custom.ReconnectionEnabledPreference android:key="RECONNECTION_ENABLED"/>
+        <com.vpn.sstp.preference.custom.ReconnectionCountPreference android:key="RECONNECTION_COUNT"/>
+        <com.vpn.sstp.preference.custom.ReconnectionIntervalPreference android:key="RECONNECTION_INTERVAL"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Buffer Size">
+        <com.vpn.sstp.preference.custom.BufferIncomingPreference android:key="BUFFER_INCOMING"/>
+        <com.vpn.sstp.preference.custom.BufferOutgoingPreference android:key="BUFFER_OUTGOING"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Log">
+        <com.vpn.sstp.preference.custom.LogDoSaveLogPreference android:key="LOG_DO_SAVE_LOG"/>
+        <com.vpn.sstp.preference.custom.LogDirPreference android:key="LOG_DIR"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory>
+        <com.vpn.sstp.preference.custom.LinkOscPreference android:key="LINK_OSC"/>
+    </PreferenceCategory>
+</PreferenceScreen>
